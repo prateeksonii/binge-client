@@ -1,5 +1,6 @@
 import { FC } from "react";
 import Banner from "./Banner";
+import MostPopularList from "./MostPopularList";
 
 const Content: FC = () => {
   return (
@@ -10,7 +11,7 @@ const Content: FC = () => {
       </div>
       <Banner />
       <div className='mt-10'>
-        <h2 className='text-2xl text-gray-700'>Most Popular</h2>
+        <MostPopularList />
       </div>
     </div>
   );

@@ -3,7 +3,7 @@ export type Genre = {
   name: string;
 };
 
-export type BannerResponse = {
+export type Movie = {
   adult: boolean;
   backdrop_path: string;
   genre_ids: number[];
@@ -19,4 +19,9 @@ export type BannerResponse = {
   video: boolean;
   vote_average: number;
   vote_count: number;
+};
+
+export type Movies = {
+  ok: boolean;
+  movies: Movie[];
 };

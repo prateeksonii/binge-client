@@ -1,14 +1,16 @@
 import { FC } from "react";
-import Content from "./Content";
-import Sidebar from "./Sidebar";
+import { BrowserRouter, Switch, Route } from "react-router-dom";
+import HomePage from "../pages/Home";
+import Movie from "../pages/Movie";
 
 const App: FC = () => {
   return (
-    <div className='mt-4 grid grid-cols-layout'>
-      <Sidebar />
-      <Content />
-      <div>filter</div>
-    </div>
+    <BrowserRouter>
+      <Switch>
+        <Route path='/movie/:id' component={Movie} />
+        <Route path='/' exact component={HomePage} />
+      </Switch>
+    </BrowserRouter>
   );
 };
 
