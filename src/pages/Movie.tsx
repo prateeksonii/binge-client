@@ -33,7 +33,7 @@ const Movie: FC<RouteComponentProps<MovieProps>> = ({ match }) => {
             {movie?.status}
           </div>
           <div className='flex items-center'>
-            <h1 className='font-bold text-4xl'>{movie?.original_title}</h1>
+            <h1 className='font-bold text-4xl'>{movie?.title}</h1>
             <div className='ml-4 text-white rounded-full bg-red-600 p-2 h-12 w-12 grid place-items-center'>
               {movie?.vote_average}
             </div>

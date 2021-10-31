@@ -4,13 +4,16 @@ import App from "./components/App";
 
 import "tailwindcss/tailwind.css";
 import { QueryClient, QueryClientProvider } from "react-query";
+import GlobalProvider from "./providers/GlobalProvider";
 
 const queryClient = new QueryClient();
 
 ReactDOM.render(
   <StrictMode>
     <QueryClientProvider client={queryClient}>
-      <App />
+      <GlobalProvider>
+        <App />
+      </GlobalProvider>
     </QueryClientProvider>
   </StrictMode>,
   document.getElementById("root")

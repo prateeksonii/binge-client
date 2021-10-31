@@ -74,3 +74,8 @@ export type SpokenLanguage = {
 export type MovieDetailRequest = {
   movieId: number;
 };
+
+export type ListType = {
+  title: string;
+  value: "popular" | "top_rated" | "upcoming" | "now_playing";
+};
