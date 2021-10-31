@@ -7,7 +7,7 @@ const App: FC = () => {
   return (
     <BrowserRouter>
       <Switch>
-        <Route path='/movie/:id' component={Movie} />
+        <Route path='/movie/:movieId' component={Movie} />
         <Route path='/' exact component={HomePage} />
       </Switch>
     </BrowserRouter>
