@@ -7,7 +7,6 @@ const HomePage: FC = () => {
     <div className='mt-4 grid grid-cols-layout'>
       <Sidebar />
       <Content />
-      <div>filter</div>
     </div>
   );
 };

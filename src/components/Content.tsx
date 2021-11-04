@@ -10,13 +10,10 @@ const Content: FC = () => {
     <div className='px-4'>
       <div className='my-5 flex items-center'>
         <div className='font-bold text-red-600 mr-4'>Movies</div>
-        <div className='font-light'>TV Shows</div>
       </div>
       {showBanner && <Banner />}
       <div className='mt-10'>
         <List title={currentList.title} value={currentList.value} />
-        {/* <List title='Top Rated' listType='top_rated' /> */}
-        {/* <MostPopularList /> */}
       </div>
     </div>
   );

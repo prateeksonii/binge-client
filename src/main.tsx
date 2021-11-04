@@ -12,7 +12,9 @@ ReactDOM.render(
   <StrictMode>
     <QueryClientProvider client={queryClient}>
       <GlobalProvider>
-        <App />
+        <div id='app'>
+          <App />
+        </div>
       </GlobalProvider>
     </QueryClientProvider>
   </StrictMode>,

@@ -1,10 +1,11 @@
 import { FC, useEffect, useState } from "react";
+import { useHistory } from "react-router-dom";
 import api from "../api";
 
-import plusIcon from "../assets/plus.svg";
 import { Movie } from "../types";
 
 const Banner: FC = () => {
+  const history = useHistory();
   const [banner, setBanner] = useState<Movie>();
 
   useEffect(() => {
@@ -21,7 +22,8 @@ const Banner: FC = () => {
 
   return (
     <div
-      className='relative w-100 h-500px bg-cover rounded-2xl'
+      onClick={() => history.push(`/movie/${banner.id}`)}
+      className='relative w-100 h-500px bg-cover rounded-2xl cursor-pointer'
       style={{
         backgroundImage: banner
           ? `url('https://image.tmdb.org/t/p/original${banner.backdrop_path}')`
@@ -32,12 +34,6 @@ const Banner: FC = () => {
         <div className='font-bold text-5xl mb-3'>{banner.title}</div>
         <div className='font-light text-md mb-10'>
           {banner.genres.map(({ name }) => name).join(", ")}
-        </div>
-        <div className='flex items-center'>
-          <button className='px-6 py-3 rounded-lg bg-red-600'>Watch Now</button>
-          <button className='ml-3 p-3 rounded-lg bg-red-200'>
-            <img src={plusIcon} className='h-6' alt='plus icon' />
-          </button>
         </div>
       </div>
     </div>
